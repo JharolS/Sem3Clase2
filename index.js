@@ -145,17 +145,18 @@ class Display {
 }
 
 new Display();
+
 let userName = 'Daniel'
 function showMessage(){
     let message = `Hello, ${userName}`;
     alert(message)
 }
 
-showMessage();
+//showMessage();
 
 function showCount(count){
     // if count is undefined o nullm, show 'unknoewn
-    laert(count ?? 'unknown');
+    alert(count ?? 'unknown');
 }
 
 showCount(0);
@@ -167,3 +168,21 @@ showCount();
 // "create" -create something
 // "set" - set a value
 // "check" -check something and return a boolean, etc.
+
+const getCars = (name, year, color) =>{
+    if (year) {
+        return {
+            name,
+            year,
+            color,
+        };
+    } else {
+        return {
+            name,
+            color,
+            year: 'unknown'
+        }
+    }
+}
+
+getCars('Ford', null, 'Blue')
